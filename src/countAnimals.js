@@ -3,7 +3,7 @@ const data = require('../data/zoo_data');
 const { species } = data; // array species
 function countAnimals(animal) {
   if (animal === undefined) {
-    let newObj = {};
+    const newObj = {};
     species.map((obj) => {
       newObj[obj.name] = obj.residents.length;
       return newObj;
