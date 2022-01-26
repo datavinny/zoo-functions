@@ -1,10 +1,11 @@
 const data = require('../data/zoo_data');
 
 function getAnimalsOlderThan(animal, minAge) {
-  const filterName = data.species.filter(({ name }) => name === animal);
-  console.log(filterName);
+  const filterName = data.species.find(({ name }) => name === animal);
 
-  const everyAge = filterName.every(({ residents: { age } }) => age >= minAge);
+  const { residents } = filterName;
+
+  const everyAge = residents.every(({ age }) => age >= minAge);
   return everyAge;
 }
 

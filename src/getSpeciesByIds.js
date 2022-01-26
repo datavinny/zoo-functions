@@ -4,10 +4,6 @@ function getSpeciesByIds(...ids) {
   if (ids === undefined) {
     return [];
   }
-  // retorna => array vazio
-  // const filterSpecies = data.species.filter(({ id }) => id === ids);
-
-  //  retorna => um array a mais se usado .filter
   const filterSpecies = [];
   for (let index = 0; index < ids.length; index += 1) {
     filterSpecies.push(data.species.find(({ id }) => id === ids[index]));
