@@ -4,7 +4,8 @@ function getEmployeeByName(employeeName) {
   if (employeeName === undefined) {
     return {};
   }
-  const filterFirstName = data.employees.find(
+  const { employees } = data; // array com os employees
+  const filterFirstName = employees.find(
     ({ firstName, lastName }) =>
       firstName === employeeName || lastName === employeeName,
   );
