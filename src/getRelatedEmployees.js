@@ -15,19 +15,21 @@ function isManager(employerId) {
 }
 
 function getRelatedEmployees(managerId) {
-  if (isManager(managerId) === false) {
-    throw new Error('O id inserido não é de uma pessoa colaboradora gerente!');
-  }
-  const nameEmployees = [];
-  employees.filter(({ firstName, lastName, managers }) => {
-    for (let index = 0; index < employees.length; index += 1) {
-      if (managers[index] === managerId) {
-        nameEmployees.push(`${firstName} ${lastName}`);
-      }
-    }
-    return nameEmployees;
-  });
-  return nameEmployees;
+  //   if (isManager(managerId) === false) {
+  //     throw new Error('O id inserido não é de uma pessoa colaboradora gerente!');
+  //   }
+  //   const nameEmployees = [];
+  //   employees.find(({ firstName, lastName, managers }) => {
+  //     for (let index = 0; index < employees.length; index += 1) {
+  //       if (managers[index] === managerId) {
+  //         nameEmployees.push(`${firstName} ${lastName}`);
+  //       }
+  //     }
+  //     return nameEmployees;
+  //   });
+  //   return nameEmployees;
 }
+
+// console.log(getRelatedEmployees('0e7b460e-acf4-4e17-bcb3-ee472265db83'));
 
 module.exports = { isManager, getRelatedEmployees };
