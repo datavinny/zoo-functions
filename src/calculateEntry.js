@@ -23,10 +23,9 @@ function calculateEntry(entrants) {
   }
   const { prices } = data;
   const entradas = countEntrants(entrants);
-  const sum =
-    entradas.child * prices.child +
-    entradas.adult * prices.adult +
-    entradas.senior * prices.senior;
+  const sum = entradas.child * prices.child
+    + entradas.adult * prices.adult
+    + entradas.senior * prices.senior;
   return sum;
 }
 
