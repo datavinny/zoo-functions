@@ -7,9 +7,8 @@ function getOldestFromFirstSpecies(employeeId) {
   const employee = employees.find(({ id }) => id === employeeId);
   const { responsibleFor } = employee;
   const filterResponsibleFor = species.find(
-    (element, index) => element.id === responsibleFor[0],
+    ({ id }) => id === responsibleFor[0],
   );
-  console.log(filterResponsibleFor);
   const { residents } = filterResponsibleFor;
   const boxOldest = residents.reduce((previousValue, currentValue) => {
     if (currentValue.age >= previousValue.age) {

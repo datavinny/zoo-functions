@@ -1,42 +1,32 @@
 const data = require('../data/zoo_data');
 
-const { species } = data;
-const spl = { NE: '' }; // speciesPerLocation
+// const { species } = data;
+// const spl = { NE: '' }; // speciesPerLocation
 
+// const array = ['NE', 'NW', 'SE', 'SW'];
 function getAnimalMap(options) {
-  if (options === undefined || !Object.keys(options).length ||options.includeNames !== undefined && options.includeNames === false ||options.sex !== undefined) {
-    spl.NE = species.filter(({ location }) => location === 'NE').map((element) => element.name);
-    spl.NW = species.filter(({ location }) => location === 'NW').map((element) => element.name);
-    spl.SE = species.filter(({ location }) => location === 'SE').map((element) => element.name);
-    spl.SW = species.filter(({ location }) => location === 'SW').map((element) => element.name);
-    return spl;
-  }
-  if (options.includeNames !== undefined && options.includeNames === true) {
-    spl.NE = species.filter(({ location }) => location === 'NE').map(({ name, residents }) => {
-        const newObj = {};
-        newObj[name] = residents.name;
-        return newObj;
-      });
-    spl.NW = species.filter(({ location }) => location === 'NW').map(({ name, residents }) => {
-        const newObj = {};
-        newObj[name] = residents;
-        return newObj;
-      });
-    spl.SE = species.filter(({ location }) => location === 'SE').map(({ name, residents }) => {
-        const newObj = {};
-        newObj[name] = residents;
-        return newObj;
-      });
-    spl.SW = species.filter(({ location }) => location === 'SW').map(({ name, residents }) => {
-        const newObj = {};
-        newObj[name] = residents;
-        return newObj;
-      });
-    return spl;
-  }
-  return 'erro';
+  // if (options === undefined || !Object.keys(options).length ||options.includeNames !== undefined && options.includeNames === false ||options.sex !== undefined) {
+  //   for (let index = 0; index < array.length; index += 1) {
+  //     spl[array[index]] = species.filter(({ location }) => location === array[index]).map((element) => element.name);
+  //   }
+  //   return spl;
+  // }
+  // if (options.includeNames) {
+  //   for (let index = 0; index < array.length; index += 1) {
+  //     spl[array[index]] = species.filter(({ location }) => location === array[index]).map(({ name, residents }) => {
+  //       const newObj = {};
+  //       arrResidents = [];
+  //       arrResidents.push(residents[index].name);
+  //       newObj[name] = arrResidents;
+  //       console.log(residents[index].name)
+  //       return newObj;
+  //     }); 
+  //   }
+  //   return spl;
+  // }
+  // return 'erro';
 }
 
-console.log(getAnimalMap({ includeNames: true }));
+// console.log(getAnimalMap({ includeNames: true }));
 
 module.exports = getAnimalMap;
