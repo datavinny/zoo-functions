@@ -3,30 +3,6 @@ const data = require('../data/zoo_data');
 const { employees } = data;
 const { species } = data;
 
-const noParam = () => {
-  // const allSpecies = [];
-  // const allLocations = [];
-  const infoAllEmployees = [];
-  employees.forEach(({ firstName, lastName, id, responsibleFor }) => {
-    const allSpecies = [];
-    const allLocations = [];
-    species.forEach(({ id, name, location }) => {
-      responsibleFor.forEach((element) => {
-        if (id === element) {
-          allSpecies.push(name);
-          allLocations.push(location);
-        }
-      });
-    });
-    const infoEmployees = { id };
-    infoEmployees.fullName = `${firstName} ${lastName}`;
-    infoEmployees.species = allSpecies;
-    infoEmployees.locations = allLocations;
-    infoAllEmployees.push(infoEmployees);
-  });
-  return infoAllEmployees;
-};
-
 const checkId = (obj) => {
   const employee = employees.find(
     ({ firstName, lastName, id }) =>
@@ -39,13 +15,12 @@ const checkId = (obj) => {
 };
 
 const getEmployeeInfo = (obj) => {
-  const employee = checkId(obj);
-  const { firstName, lastName, id, responsibleFor } = employee;
+  const { firstName, lastName, id, responsibleFor } = checkId(obj);
   const speciesEmployee = [];
   const locationsEmployee = [];
-  species.forEach(({ id, name, location }) => {
+  species.forEach(({ id: specieId, name, location }) => {
     responsibleFor.forEach((element) => {
-      if (id === element) {
+      if (specieId === element) {
         speciesEmployee.push(name);
         locationsEmployee.push(location);
       }
@@ -56,6 +31,15 @@ const getEmployeeInfo = (obj) => {
   infoEmployee.species = speciesEmployee;
   infoEmployee.locations = locationsEmployee;
   return infoEmployee;
+};
+
+const noParam = () => {
+  const infoAllEmployees = [];
+  employees.forEach((employee) => {
+    const infoEmployees = getEmployeeInfo(employee);
+    infoAllEmployees.push(infoEmployees);
+  });
+  return infoAllEmployees;
 };
 
 function getEmployeesCoverage(obj) {
