@@ -1,7 +1,12 @@
 ## Boas vindas ao repositório do projeto de ES6 e Higher Order Functions!
 
 # Contexto
-Este projeto trata-se de uma ferramenta de back-office para armazenar e buscar dados de erros que ocorreram com clientes.
+Este projeto foi feito enquanto eu estudava na @Trybe.
+
+## Técnologias usadas
+
+Front-end:
+> Desenvolvido usando: CSS3, HTML5, ES6.
 
 ## Habilidades
 
@@ -13,29 +18,21 @@ Neste projeto, foi testado habilidades de:
 - Aprender a usar de forma conjunta as _Higher Order Functions_;
 - Interpretar testes unitários e produzir soluções que atendam a eles.
 
----
-
 ### Data de entrega
 
 - Projeto individual;
 - Foram 2 dias de projeto;
 - Data de entrega do projeto: `03/02/2022 - 14:00h`
 
----
-
-## Técnologias usadas
-
-Front-end:
-> Desenvolvido usando: CSS3, HTML5, ES6.
-
 ## Para testar/contribuir no Projeto
 
 1. Clone o repositório
   * `git clone <url>`
-  * Entre na pasta do repositório que você acabou de clonar
 
-2. Instale as dependências
+2. Entre na pasta do repositório que você acabou de clonar
+
+3. Instale as dependências
   * `npm install`
 
-3. Execute a aplicação
+4. Execute a aplicação
   * `npm start`
