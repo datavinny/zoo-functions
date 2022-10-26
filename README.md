@@ -6,7 +6,7 @@ Este projeto foi feito enquanto eu estudava na @Trybe.
 ## Técnologias usadas
 
 Front-end:
-> Desenvolvido usando: CSS3, HTML5, ES6.
+> Desenvolvido usando: ES6.
 
 ## Habilidades
 
