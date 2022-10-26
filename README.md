@@ -18,12 +18,6 @@ Neste projeto, foi testado habilidades de:
 - Aprender a usar de forma conjunta as _Higher Order Functions_;
 - Interpretar testes unitários e produzir soluções que atendam a eles.
 
-### Data de entrega
-
-- Projeto individual;
-- Foram 2 dias de projeto;
-- Data de entrega do projeto: `03/02/2022 - 14:00h`
-
 ## Para testar/contribuir no Projeto
 
 1. Clone o repositório
